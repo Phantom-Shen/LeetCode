@@ -2,13 +2,13 @@
 // it represents the number of operations we need for alligning the words
 // e.g. word1 = "horse", word2 = "ros"
 // While comparing two words,
-// if we allign the word like:
+// if we allign the words:
 //      h   o   r   s   e
 //      r   o   s
 // then, dp[0][0] = 0 + 0 = 0;
 // since both words start from index 0;
 //
-// However if we allign the word like:
+// However, if we allign the words:
 //      h   o   r   s   e
 //          r   o   s
 // Since word2 start from index 1,
