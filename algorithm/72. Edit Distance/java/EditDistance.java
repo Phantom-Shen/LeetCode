@@ -5,7 +5,7 @@
 // if we allign the word like:
 //      h   o   r   s   e
 //      r   o   s
-// then, dp[i][j] = i + j = 0 + 0 = 0;
+// then, dp[0][0] = 0 + 0 = 0;
 // since both words start from index 0;
 //
 // However if we allign the word like:
@@ -13,7 +13,7 @@
 //          r   o   s
 // Since word2 start from index 1,
 // Then, we can regard it as that we have already made one deletion operation on 'h' in word1
-// so dp[i][j] = i + j = 0 + 1 = 1;
+// so dp[0][1] = 0 + 1 = 1;
 // 
 // etc.
 class Solution {
