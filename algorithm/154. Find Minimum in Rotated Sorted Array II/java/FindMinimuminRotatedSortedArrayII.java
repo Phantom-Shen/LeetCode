@@ -11,7 +11,7 @@ class Solution {
                 r = mid;
             }
         }
-        // 
+        // Linear search
         int result = nums[l];
         while(l < r){
             result = Math.min(result, nums[l]);
