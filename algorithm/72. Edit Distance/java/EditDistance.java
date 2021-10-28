@@ -1,5 +1,5 @@
 // notice the initial condition when i == 0 || j == 0, dp[i][j] = i+j;
-// becuase it means the number of  operations we need for alligning the words
+// it represents the number of operations we need for alligning the words
 // e.g. word1 = "horse", word2 = "ros"
 // While comparing two words,
 // if we allign the word like:
