@@ -1,3 +1,5 @@
+// DP
+// Can improve the space complexity by using two rows, since each time we are only fetching the data on row dp[i] and row dp[i-1];
 class Solution {
     public int longestCommonSubsequence(String text1, String text2) {
         int n1 = text1.length(), n2 = text2.length();
