@@ -8,6 +8,7 @@ class Solution {
                 if(grid[i][j] == 1) {
                     grid[i][j] = 0;
                     recur(grid, i, j, result);
+                    grid[i][j] = 1;
                 }
             }
         }
@@ -15,7 +16,6 @@ class Solution {
     }
     
     private void recur(int[][] grid, int i, int j, int[] result){
-        //System.out.println(i+", "+j);
         int row = grid.length, col = grid[0].length;
         if(grid[i][j] == 2){
             for(int l = 0; l < row; l++){
