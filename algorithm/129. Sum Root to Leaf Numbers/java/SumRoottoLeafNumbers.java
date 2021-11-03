@@ -13,7 +13,7 @@
  *     }
  * }
  */
-// Not good for concurrency apparently. Could solve this with iterative way
+// Not good for concurrency apparently. Could solve this with iterative way to avoid changing the tree
 // BUT, recursion is really easy and fast to write :D
 class Solution {
     public int sumNumbers(TreeNode root) {
