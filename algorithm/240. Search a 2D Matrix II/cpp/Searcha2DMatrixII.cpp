@@ -1,4 +1,4 @@
-// you can tree the top-right entry as a root for a BST, since everything on the left are smaller than it and everything beneath are bigger than it.
+// you can treat the top-right entry as a root for a BST, since everything on the left are smaller than it and everything beneath are bigger than it.
 // Similar for bottom-left entry.
 class Solution {
 public:
