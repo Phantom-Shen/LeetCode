@@ -13,6 +13,8 @@
  *     }
  * }
  */
+// Not good for concurrency apparently. Could solve this with iterative way
+// BUT, recursion is really easy and fast to write :D
 class Solution {
     public int sumNumbers(TreeNode root) {
         if(root.left==null && root.right==null) return root.val;
