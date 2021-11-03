@@ -8,7 +8,7 @@ class MedianFinder {
     }
     
     public void addNum(int num) {
-        // we must make sure all the elements in right is bigger than left
+        // we must make sure all the elements in right are bigger than those in left
         if(left.size() == right.size()+1){
             left.add(num);
             right.add(left.poll());
