@@ -19,7 +19,7 @@
 class Solution {
     public int rob(TreeNode root) {
         int[] result = recur(root);
-        return Math.max(result[0],result[1]);
+        return result[0];
     }
     
     private int[] recur(TreeNode root){
