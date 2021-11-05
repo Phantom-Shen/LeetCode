@@ -23,7 +23,7 @@ class Solution {
         // rightEx = pathSum(root.right, targetSum);
         // leftIn = pathSum(root.left, targetSum-root.val);
         // rightIn = pathSum(root.right, targetSum-root.val);
-        // instead we should write a function that count only the path fron root node to the leaf and record all the path that has targetSum
+        // instead we should write a function that count only the path from root node to the leaf and record all the path that has targetSum
         leftEx = pathSum(root.left, targetSum);
         rightEx = pathSum(root.right, targetSum);
         leftIn = pathSumRoot(root.left, targetSum-root.val);
