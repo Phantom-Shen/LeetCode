@@ -1,4 +1,4 @@
-// We can improve the space complexity by using a stack variable to record the max temp on right in stead of using a stack, which uses too much space
+// We can improve the space complexity by using a stack variable to record the max temp on right, in stead of using a stack which uses too much space
 class Solution {
     public int[] dailyTemperatures(int[] temperatures) {
         int n = temperatures.length;
