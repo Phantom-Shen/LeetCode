@@ -10,6 +10,7 @@ class Solution {
         // if odd, there's no way we can partition into two subset with equal sum
         if((sum&0x00000001) == 1) return false;
         // Knapsack problem (particularly 0/1 Knapsack)
+        // check if we can find a subset that sum to target
         int target = sum>>1;
         boolean[][] dp = new boolean[nums.length+1][target+1];
         
