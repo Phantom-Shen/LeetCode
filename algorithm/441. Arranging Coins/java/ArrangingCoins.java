@@ -7,6 +7,7 @@
 // => x <= sqrt(2n + 0.25) - 0.5
 class Solution{
     public int arrangeCoins(int n){
+        // conver n to (long) to avoid overflow
         return (int) (Math.sqrt(2 * (long)n + 0.25) - 0.5);
     }
 }
