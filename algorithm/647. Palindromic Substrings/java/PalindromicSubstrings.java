@@ -9,7 +9,7 @@ class Solution {
             dp[i][i] = true;
             for(int j = i; j >= 0; j--){
                 if(s.charAt(i)==s.charAt(j)){
-                    if(j>=i-1||dp[i-1][j+1]){
+                    if(j>=i-1||dp[i-1][j+1]){ // dp[i-1][j+1] is the substring from s[j+1] to s[i-1] which is substring in the middle of s[j] and s[i]
                         dp[i][j] = true;
                         result++;
                     }
