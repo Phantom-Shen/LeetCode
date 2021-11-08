@@ -17,6 +17,13 @@ class Solution {
                     dp[i][j] = 2 + dp[i-1][j+1];
                 }
                 else{
+                    // an example to explain here: "bbbab"
+                    // if now i is at 'a'
+                    // dp[i-1][j] is the number of palindrome that substring [j,i-1] have
+                    // dp[i-1][j] is the numebr xx xxxxxxxxxx xxxx xxxxxxxxx [j+1,i] xxxx
+                    // if j now is at 0, which is the first 'b'
+                    // so we are choosing between 'bbb' and 'bba', and see which has more palindrome
+                    // Both values are calculated in previous steps, so that's why it's DP
                     dp[i][j] = Math.max(dp[i-1][j], dp[i][j+1]);
                 }
             }
