@@ -1,3 +1,21 @@
+class Solution {
+    public int[] maxSlidingWindow(int[] nums, int k) {
+        int n = nums.length;
+        int[] result = new int[n+1-k];
+        Deque<Integer> deck = new ArrayDeque();
+        for(int i = 0; i < n; i++){
+            // maintain deck by ensuring front of the deck is max
+            while(!deck.isEmpty() && deck.peekFirst() < i+1-k) deck.pollFirst();
+            while(!deck.isEmpty() && nums[i] > nums[deck.peekLast()]) deck.pollLast();
+            // put on deck
+            deck.addLast(i);
+            // update result
+            if(i+1>=k) result[i+1-k] = nums[deck.peekFirst()];
+        }
+        return result;
+    }
+}
+/*
 // Can be improved!!!!!!!
 class Solution {
     public int[] maxSlidingWindow(int[] nums, int k) {
@@ -24,3 +42,4 @@ class Solution {
         return result;
     }
 }
+*/
