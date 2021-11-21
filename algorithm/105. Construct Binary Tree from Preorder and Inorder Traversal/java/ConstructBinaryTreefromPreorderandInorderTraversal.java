@@ -13,25 +13,27 @@
  *     }
  * }
  */
+// very similar to "105. Construct Binary Tree from Preorder and Inorder Traversal"
 class Solution {
-    int curi;
-    Map<Integer, Integer> mp;
-    public TreeNode buildTree(int[] preorder, int[] inorder) {
-        curi = 0;
-        mp = new HashMap<>();
-        for(int i = 0;i < inorder.length; i++){
-            mp.put(inorder[i],i);
+    private int index;
+    public TreeNode buildTree(int[] inorder, int[] postorder) {
+        int n = inorder.length;
+        Map<Integer, Integer> mp = new HashMap();
+        index = n-1;
+        for(int i = 0; i < n; i++){
+            mp.put(inorder[i], i);
         }
-        return recur(preorder, 0, preorder.length-1);
+        return recur(mp, postorder, 0, n-1);
     }
     
-    private TreeNode recur(int[] preorder, int l, int r){
-        if(l > r) return null;
-        int curVal = preorder[curi];
+    private TreeNode recur(Map<Integer, Integer> inorder, int[] postorder, int l, int r){
+        if(l>r) return null;
+        
+        int curVal = postorder[index];
         TreeNode newNode = new TreeNode(curVal);
-        curi++;
-        newNode.left = recur(preorder, l, mp.get(curVal)-1);
-        newNode.right = recur(preorder, mp.get(curVal)+1, r);
+        index--;
+        newNode.right = recur(inorder, postorder, inorder.get(curVal)+1, r);
+        newNode.left = recur(inorder, postorder, l, inorder.get(curVal)-1);
         return newNode;
     }
 }
